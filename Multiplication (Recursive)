@@ -1,0 +1,11 @@
+int multiplyNumbers(int m, int n) {
+    // Write your code here
+if(n==0){
+  return 0;
+}
+ int is_smaller=multiplyNumbers(m,--n);
+  int sum=is_smaller+m;
+  return sum;
+}
+
+
