@@ -1,0 +1,23 @@
+#include<cstring>
+bool helper(char input[],int start,int end){
+    if(input[0]=='/0' || input[1]=='/0'){
+        return true;
+    }
+if(start>=end){
+    return true;
+}  
+    if(input[start]!=input[end]){
+        return false;
+    }
+    bool output=helper(input,start+1,end-1);
+    return output;
+}
+
+bool checkPalindrome(char input[]) {
+    // Write your code here
+    int start=0;
+    int end=strlen(input)-1;
+    return helper(input,start,end);
+}
+
+
