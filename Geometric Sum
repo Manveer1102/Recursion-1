@@ -1,0 +1,12 @@
+#include<math.h>
+double geometricSum(int k) {
+    // Write your code here
+if(k==0){
+  return 1;
+}
+  double x=(1/(pow(2,k)));
+  //cout<<"value of x"<<x<<endl;
+  double is_smaller=geometricSum(--k);
+  double sum=is_smaller+x;
+  return sum;
+}
